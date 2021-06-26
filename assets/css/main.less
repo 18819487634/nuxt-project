@@ -1,14 +1,14 @@
 /*页面重置样式*/
 *{
-    margin: 0;
-    padding: 0;
-    font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    outline: none;
-    -webkit-text-size-adjust: none !important;/* ios横屏字体放大 */
-    text-size-adjust: none !important;
-  }
+  margin: 0;
+  padding: 0;
+  font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  outline: none;
+  -webkit-text-size-adjust: none !important;/* ios横屏字体放大 */
+  text-size-adjust: none !important;
+}
   *:not(input,textarea) {
     -webkit-tap-highlight-color: rgba(200, 200, 200, 0);
   }
@@ -19,10 +19,8 @@
     font-size: 28px;
   }
   body{
-    max-width: 1600px;
     position: relative;
     margin: 0 auto!important;
-  
   }
   img {
     border: none;
@@ -48,15 +46,6 @@
   i {
     font-size: 100%;
     font-weight: normal;
-  }
-  input,
-  button {
-    border: none;
-    outline: none;
-    border-radius: initial;
-    margin: 0;
-    padding: 0;
-    background: transparent;
   }
   a {
     color: #333;
@@ -103,14 +92,10 @@
   pre{
     display: inline-block;
   }
-  /*禁止长按复制*/
   /*在 iOS 上，输入框默认有内部阴影 清除输入框内阴影*/
   input,
   textarea {
     border: 0;
-    /* 方法1 */
-    -webkit-appearance: none;
-    /* 方法2 */
   }
   /*弹性滑动*/
   .naative-auto {
@@ -208,57 +193,37 @@
     -webkit-overflow-scrolling: initial!important;
   }
   /* 宽度 */
-  .scroll-bar::-webkit-scrollbar {
+  ::-webkit-scrollbar {
     width: 8px;
   }
   /* 滚动条的滑轨背景颜色 */
-  .scroll-bar::-webkit-scrollbar-track {
+  ::-webkit-scrollbar-track {
     background-color: #cfcfcf;
     border-radius:4px;
   }
   /* 滑块颜色 */
-  .scroll-bar::-webkit-scrollbar-thumb {
+  ::-webkit-scrollbar-thumb {
     background-color: #cfcfcf;
     border-radius:8px;
   }
   /*内层轨道的颜色*/
-  .scroll-bar::-webkit-scrollbar-track-piece{
+  ::-webkit-scrollbar-track-piece{
     background-color: #eeeeee;
     border-radius:5px;
   }
   /* 滑轨两头的监听按钮颜色 */
-  .scroll-bar::-webkit-scrollbar-button {
+  ::-webkit-scrollbar-button {
     background-color: #fff;
     width:0px;
     height:0px;
   }
   /* 横向滚动条和纵向滚动条相交处尖角的颜色 */
-  .scroll-bar::-webkit-scrollbar-corner {
+  ::-webkit-scrollbar-corner {
     background-color: #00a8f5;
-  }
-  
-  .height100 {
-    height: 100%;
-    width: 100%;
-  }
-  .more-icon {
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 24px;
-  }
-  
-  .pd-top-48 {
-    padding-top: 48px !important;
   }
   
   .overflow-y {
     overflow-y: auto;
-  }
-  .fotter {
-    height: 240px;
-    width: 100%;
   }
 // 上下滑动动画
 .slideY-enter-active {
@@ -298,4 +263,8 @@
 
 #MathJax_Message {
   display: none;
+}
+
+#nprogress .bar {
+  background: #42b983 !important;
 }

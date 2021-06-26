@@ -14,7 +14,6 @@ export default {
   },
   methods: {
     handleMsg () {
-      console.log('子组件调用成功')
       this.$parent.handleMsg('子传父')
     }
   }

@@ -13,9 +13,11 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.11.0",
-    "element-ui": "^2.13.2",
+    "element-ui": "^2.15.2",
     "js-cookie": "^2.2.1",
-    "nuxt": "^2.13.0"
+    "nprogress": "^0.2.0",
+    "nuxt": "^2.13.0",
+    "rimraf": "^3.0.2"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.0.0",
@@ -23,6 +25,9 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^7.2.0",
     "eslint-plugin-nuxt": "^1.0.0",
-    "image-webpack-loader": "^7.0.1"
+    "image-webpack-loader": "^7.0.1",
+    "less": "^3.11.3",
+    "less-loader": "^6.1.1",
+    "postcss-px2rem": "^0.3.0"
   }
 }

@@ -3,9 +3,9 @@ import { ImagePreview } from 'vant'
 
 const Base64 = require('js-base64').Base64
 
-class HqTool {
+class Tool {
   constructor () {
-    const self = HqTool
+    const self = Tool
     this.version = '1.0.0'
     this.arrayAddingMethod()
     this.stringAddingMethod()
@@ -503,37 +503,6 @@ class HqTool {
     clearSessionStorage() {
         window.sessionStorage.clear()
     }
-    imgSrc(str){
-        // http://tiku.hqjy.com//Upload/image/20140913/20140913170832_8644.jpg
-        let startReg = /http:|https:/ig
-        let imgReg = /src/
-        // 不需要处理的图片路径
-        if (imgReg.test(str) && startReg.test(str)) return str
-        let reg1 = /src="/g
-        let reg2 = /src='/g
-        let res = ''
-        let imgCdn = `src="http://tiku.hqjy.com/`
-        let cdn = `http://tiku.hqjy.com/`
-        if (reg1.test(str)) {
-        res = str.replace(reg1, imgCdn)
-        } else if (reg2.test(str)) {
-        res = str.replace(reg2, imgCdn)
-        } else {
-        const regImgSrc = /^(\s|\S)+(jpg|png|JPG|PNG)+$/
-        if (regImgSrc.test(str)) {
-            let newImg = `<img src="${cdn + str}" />`
-            if (startReg.test(str)) {
-            newImg = `<img src="${str}" />`
-            } else {
-            newImg = `<img src="${cdn + str}" />`
-            }
-            res = newImg
-        } else {
-            res = str
-        }
-        }
-        return res
-    }
     imgEnlargeMax(target){
         // 图片缩放
         let tag = target.srcElement
@@ -835,4 +804,4 @@ class HqTool {
         window.location.href = url
     }
 }
-export default new HqTool()
+export default new Tool()

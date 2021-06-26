@@ -14,6 +14,31 @@
   </div>
 </template>
 
+<script>
+import clickHeart from 'assets/js/clickHeart'
+const routerMenu = ['my_project', 'about', 'message']
+export default {
+  mounted () {
+    this.init()
+  },
+  methods: {
+    // 初始化方法
+    init () {
+      // 增加鼠标点击爱心
+      clickHeart(window, document)
+      this.initMenu()
+    },
+    // 初始化header菜单栏状态
+    initMenu () {
+      const pathName = this.$route.name
+      // if (!pathName) return
+      const index = routerMenu.indexOf(pathName)
+      this.$store.commit('setActiveIndex', index)
+    }
+  }
+}
+</script>
+
 <style>
 html {
   font-family:
@@ -43,20 +68,19 @@ html {
 }
 
 .wrapper-top {
-  height: 104px;
+  height: 60px;
 }
 .wrapper-content {
-  min-height: calc(100vh);
+  min-height: 100vh;
+  padding: 0 40px;
+  height: 100%;
   box-sizing: border-box;
-  padding-bottom: 227px;
-  padding-top: 104px;
-  margin-top: -104px;
 }
 .wrapper-footer {
   width: 100%;
   position: relative;
   z-index: 1;
-  height: 227px;
-  margin-top: -227px;
+  height: 60px;
+  line-height: 60px;
 }
 </style>

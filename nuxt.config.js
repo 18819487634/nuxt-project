@@ -21,26 +21,29 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '分享，成长，技术，博客' },
+      { hid: 'description', name: 'description', content: 'Evan的前端博客，关于Evan，Evan博客管理平台等系列Evan的平台，主要内容为记录Evan前端开发的成长点滴' },
+      { hid: 'Keyworkds', name: 'Keywords', content: 'Evan的前端博客，关于Evan，Evan前端攻城狮，ssr博客，前端博客，Evan的个人博客' },
       { 'http-equiv': 'Cache-Control', content: 'max-age=0' },
       { 'http-equiv': 'Expires', content: '0' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon1.ico' }
     ]
   },
   /*
   ** Global CSS
   */
   css: [
-    'element-ui/lib/theme-chalk/index.css'
+    'element-ui/lib/theme-chalk/index.css',
+    '~assets/css/main.less'
   ],
   /*
   ** Plugins to load before mounting the App
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
-    '@/plugins/element-ui'
+    { src: '@/plugins/element-ui', ssr: true },
+    { src: '@/plugins/router', ssr: false }
   ],
   /*
   ** Auto import components
@@ -103,6 +106,11 @@ export default {
           ]
         }
       )
-    }
+    },
+    postcss: [
+      require('postcss-px2rem')({
+        remUnit: 16
+      })
+    ]
   }
 }
