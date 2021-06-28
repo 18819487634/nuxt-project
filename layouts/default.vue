@@ -16,7 +16,6 @@
 
 <script>
 import clickHeart from 'assets/js/clickHeart'
-const routerMenu = ['my_project', 'about', 'message']
 export default {
   mounted () {
     this.init()
@@ -26,14 +25,6 @@ export default {
     init () {
       // 增加鼠标点击爱心
       clickHeart(window, document)
-      this.initMenu()
-    },
-    // 初始化header菜单栏状态
-    initMenu () {
-      const pathName = this.$route.name
-      // if (!pathName) return
-      const index = routerMenu.indexOf(pathName)
-      this.$store.commit('setActiveIndex', index)
     }
   }
 }

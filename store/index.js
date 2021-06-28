@@ -1,8 +1,7 @@
 import cookie from 'js-cookie'
 
 const state = () => ({
-  token: null,
-  activeIndex: 0
+  token: null
 })
 
 const mutations = {
@@ -13,9 +12,6 @@ const mutations = {
       // 加下划线表示私有属性
       window._token = token
     }
-  },
-  setActiveIndex (state, activeIndex) {
-    state.activeIndex = activeIndex
   }
 }
 

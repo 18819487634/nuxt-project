@@ -20,10 +20,8 @@ const router = new VueRouter({
 
 export default ({ app }) => {
   app.router.beforeEach((to, from, next) => {
-    if (window.location.pathname !== to.fullPath) {
-      NProgress.start()
-      next()
-    }
+    NProgress.start()
+    next()
   })
   app.router.afterEach((to, from) => {
     NProgress.done()

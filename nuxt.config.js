@@ -43,7 +43,8 @@ export default {
   */
   plugins: [
     { src: '@/plugins/element-ui', ssr: true },
-    { src: '@/plugins/router', ssr: false }
+    { src: '@/plugins/router', ssr: false },
+    { src: '@/plugins/request', ssr: true }
   ],
   /*
   ** Auto import components
@@ -74,8 +75,8 @@ export default {
     credentials: true
   },
   proxy: {
-    '/p': {
-      target: 'http://10.0.98.146',
+    '/send': {
+      target: 'http://pushplus.hxtrip.com',
       changeOrigin: true
     }
   },

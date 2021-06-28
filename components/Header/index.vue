@@ -45,7 +45,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+const routerMenu = ['my_project', 'about', 'message']
 
 export default {
   props: {
@@ -61,13 +61,23 @@ export default {
         { href: '/my_project', name: 'project' },
         { href: '/about', name: 'about' },
         { href: '/message', name: 'message' }
-      ]
+      ],
+      activeIndex: null
     }
   },
   computed: {
-    ...mapState(['activeIndex'])
   },
   mounted () {
+    this.initMenu()
+  },
+  methods: {
+    // 初始化header菜单栏状态
+    initMenu () {
+      const pathName = this.$route.name
+      // if (!pathName) return
+      const index = routerMenu.indexOf(pathName)
+      this.activeIndex = index
+    }
   }
 }
 </script>
@@ -93,6 +103,7 @@ a {
 .active-a {
   padding-bottom: 4px;
   border-bottom: 2px solid #46bd87;
+  color: #46bd87;
 }
 .my-avatar {
   width: 30px;
