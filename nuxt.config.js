@@ -23,11 +23,29 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Evan的前端博客，关于Evan，Evan博客管理平台等系列Evan的平台，主要内容为记录Evan前端开发的成长点滴' },
       { hid: 'Keyworkds', name: 'Keywords', content: 'Evan的前端博客，关于Evan，Evan前端攻城狮，ssr博客，前端博客，Evan的个人博客' },
+      { 'http-equiv': 'Pragma', content: 'no-cache' },
       { 'http-equiv': 'Cache-Control', content: 'max-age=0' },
       { 'http-equiv': 'Expires', content: '0' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon1.ico' }
+    ],
+    scripts: [
+      {
+        src: '/js/L2Dwidget.0.min.js',
+        async: false,
+        defer: true
+      },
+      {
+        src: '/js/L2Dwidget.min.js',
+        async: false,
+        defer: true
+      }
+      // {
+      //   innerHTML: 'console.log("I am in body");',
+      //   type: 'text/javascript',
+      //   body: true
+      // }
     ]
   },
   /*

@@ -25,6 +25,28 @@ export default {
     init () {
       // 增加鼠标点击爱心
       clickHeart(window, document)
+      this.addLive2D()
+    },
+    addLive2D () {
+      // const scriptEle1 = document.createElement('script')
+      // const scriptEle2 = document.createElement('script')
+      // const mainBody = document.body
+      // scriptEle1.src = '~/assets/js/L2Dwidget.0.min.js'
+      // scriptEle2.src = '~/assets/js/L2Dwidget.min.js'
+      // // scriptEle1.src = 'static/L2Dwidget.0.min.js'
+      // // scriptEle2.src = 'static/L2Dwidget.min.js'
+      // mainBody.appendChild(scriptEle1)
+      // mainBody.appendChild(scriptEle2)
+      // L2Dwidget.init({
+      //   display: {
+      //     superSample: 2,
+      //     width: 200,
+      //     height: 400,
+      //     position: 'right',
+      //     hOffset: 0,
+      //     vOffset: 0
+      //   }
+      // })
     }
   }
 }
@@ -49,6 +71,10 @@ html {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
   height: 100%;
+}
+
+#live2dcanvas {
+  border: 0 !important;
 }
 
 *,
